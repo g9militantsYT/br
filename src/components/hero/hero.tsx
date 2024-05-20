@@ -27,7 +27,7 @@ export default component$(() => {
                 y: 0.35,
               },
             };
-
+ 
             function loadConfetti() {
               return new Promise<(opts: any) => void>((resolve, reject) => {
                 if ((globalThis as any).confetti) {
