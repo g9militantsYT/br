@@ -1,13 +1,15 @@
 {
-  "name": "my-qwik-site-with-visual-cms",
-  "description": "Site integrated with Builder.io for visual editing",
+  "name": "my-qwik-basic-starter",
+  "description": "Demo App with Routing built-in (recommended)",
   "engines": {
-    "node": ">=15.0.0"
+    "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
   },
+  "engines-annotation": "Mostly required by sharp which needs a Node-API v9 compatible runtime",
   "private": true,
   "trustedDependencies": [
     "sharp"
   ],
+  "trustedDependencies-annotation": "Needed for bun to allow running install scripts",
   "type": "module",
   "scripts": {
     "build": "qwik build",
@@ -15,38 +17,34 @@
     "build.preview": "vite build --ssr src/entry.preview.tsx",
     "build.server": "vite build -c adapters/cloudflare-pages/vite.config.ts",
     "build.types": "tsc --incremental --noEmit",
-    "deploy": "wrangler pages publish ./dist",
+    "deploy": "wrangler pages deploy ./dist",
     "dev": "vite --mode ssr",
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
     "fmt": "prettier --write .",
     "fmt.check": "prettier --check .",
-    "lesgo": "npm run build && npm run deploy && node sendDiscordMessage.js",
     "lint": "eslint \"src/**/*.ts*\"",
     "preview": "qwik build preview && vite preview --open",
-    "serve": "wrangler pages dev ./dist",
+    "serve": "wrangler pages dev ./dist --compatibility-flags=nodejs_als",
     "start": "vite --open --mode ssr",
     "qwik": "qwik"
   },
   "devDependencies": {
-    "@builder.io/dev-tools": "^0.0.7",
-    "@builder.io/qwik": "^1.4.5",
-    "@builder.io/qwik-city": "^1.4.5",
-    "@builder.io/sdk-qwik": "^0.4.5",
-    "@types/eslint": "^8.56.2",
-    "@types/node": "^20.11.6",
-    "@typescript-eslint/eslint-plugin": "^6.19.1",
-    "@typescript-eslint/parser": "^6.19.1",
-    "eslint": "^8.56.0",
-    "eslint-plugin-qwik": "^1.4.5",
-    "prettier": "^3.2.4",
-    "typescript": "5.3.3",
+    "@builder.io/qwik": "^1.5.4",
+    "@builder.io/qwik-city": "^1.5.4",
+    "@types/eslint": "^8.56.10",
+    "@types/node": "^20.12.7",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
+    "@typescript-eslint/parser": "^7.7.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-qwik": "^1.5.4",
+    "prettier": "^3.2.5",
+    "typescript": "5.4.5",
     "undici": "*",
-    "vite": "^5.0.12",
+    "vite": "^5.2.10",
     "vite-tsconfig-paths": "^4.2.1",
     "wrangler": "^3.0.0"
   },
   "dependencies": {
-    "axios": "^1.6.7",
-    "form-data": "^4.0.0"
+    "@qwikest/icons": "^0.0.13"
   }
 }

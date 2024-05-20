@@ -1,23 +1,13 @@
-.wrapper {
+.counter-wrapper {
+  margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
 }
 
-.button {
-  background: var(--qwik-dirty-black);
-  border: none;
-  border-radius: 8px;
-  color: white;
-  cursor: pointer;
-  padding: 10px;
-  text-align: center;
-  font-weight: 700;
-  font-size: 2em;
-  min-width: 50px;
-}
-
-.button:hover {
-  background: var(--qwik-dark-blue);
+@media screen and (min-width: 768px) {
+  .counter-wrapper {
+    gap: 30px;
+  }
 }
