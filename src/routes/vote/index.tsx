@@ -12,11 +12,11 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "",
+  title: "Vote",
   meta: [
     {
       name: "description",
-      content: "Welcome to the official website of Bricks Network",
+      content: "Vote for us!",
     },
   ],
 };
