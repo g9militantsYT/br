@@ -11,12 +11,12 @@ export default component$(() => {
         </div>
         <nav>
           <li>
-            <a href="/" target="_blank" rel="noopener noreferrer">
+            <a href="/" rel="noopener noreferrer">
               Home
             </a>
           </li>
           <li>
-            <a href="/vote" target="_blank" rel="noopener noreferrer">
+            <a href="/vote" rel="noopener noreferrer">
               Vote
             </a>
           </li>

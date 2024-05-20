@@ -1,17 +1,17 @@
 import { component$ } from "@builder.io/qwik";
 import styles from "./hero.module.css";
-import ImgThunder from "../../media/thunder.png?jsx";
+import ImgCreeper from "../../media/bricks-network.png?jsx";
 
 export default component$(() => {
   return (
     <div class={["container", styles.hero]}>
-      <ImgThunder class={styles["hero-image"]} alt="Image thunder" />
+      <ImgCreeper class={styles["hero-image"]} alt="Creeper Image" />
       <h1>
-        So <span class="highlight">fantastic</span>
+        Welcome to <span class="highlight">Minecraft</span>
         <br />
-        to have <span class="highlight">you</span> here
+        Server <span class="highlight">Adventure</span>
       </h1>
-      <p>Have fun building your App with Qwik.</p>
+      <p>Join our community and start building your world today!</p>
       <div class={styles["button-group"]}>
         <button
           onClick$={async () => {
@@ -21,7 +21,7 @@ export default component$(() => {
               gravity: 0,
               decay: 0.95,
               startVelocity: 30,
-              colors: ["006ce9", "ac7ff4", "18b6f6", "713fc2", "ffffff"],
+              colors: ["00ff00", "ffffff", "ff0000", "0000ff", "ffff00"],
               origin: {
                 x: 0.5,
                 y: 0.35,
@@ -67,14 +67,14 @@ export default component$(() => {
             setTimeout(shoot, 400);
           }}
         >
-          Time to celebrate
+          Celebrate Your Build
         </button>
         <a
-          href="https://qwik.dev/docs"
+          href="https://minecraft.net/en-us/article/minecraft-servers"
           target="_blank"
           class="button button-dark"
         >
-          Explore the docs
+          Learn More
         </a>
       </div>
     </div>
